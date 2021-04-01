@@ -46,3 +46,20 @@ const {
     updateRole,
     displayRole,
 } = require ('./role');
+
+async function app () {
+    console.log('a');
+    const answer = await inquirer.prompt( [
+        {
+            type: 'list',
+            name: 'action',
+            message: 'Select a choice',
+            choices: [
+
+            ]
+
+        }
+
+
+    ])
+}
