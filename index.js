@@ -6,12 +6,43 @@
 //db3 = ID + first name + last name + manager ID
 
 //functionality
-//add, view and update the databases
+//add, remove, view and update the databases
 
 //packages to include
 
 //inquirer
+const inquirer = require('inquirer');
 //a database/sql
+const db = require('./database');
+
 //nom package
 
 //console.table
+
+
+//setting up variables
+const {
+    addEmployee,
+    removeEmployee,
+    updateEmployee,
+    addManager,
+    removeManager,
+    updateManager,
+    displayEmployees,
+    displayManagers,
+    displayDepartment
+} = require('./employee');
+
+const {
+    addDepartment,
+    removeDepartment,
+    updateDepartment,
+    displayDepartment
+} = require ('./department');
+
+const {
+    addRole,
+    removeRole,
+    updateRole,
+    displayRole,
+} = require ('./role');
