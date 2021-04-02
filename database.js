@@ -67,7 +67,7 @@ const database = {
 
     init: function () {
         db.query (
-            `insert infro department(name)`,
+            `insert info department(name)`,
         
             err => {
                 if (err) {
