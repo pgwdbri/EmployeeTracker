@@ -9,7 +9,6 @@
 //add, remove, view and update the databases
 
 //packages to include
-
 //inquirer
 const inquirer = require('inquirer');
 //a database/sql
@@ -37,7 +36,7 @@ const {
     addDepartment,
     removeDepartment,
     updateDepartment,
-    displayDepartment
+    displayDepartment,
 } = require ('./department');
 
 const {
@@ -47,6 +46,8 @@ const {
     displayRole,
 } = require ('./role');
 
+//functionality
+//add, remove, view and update the databases
 async function app () {
     console.log('a');
     const answer = await inquirer.prompt( [
@@ -55,11 +56,33 @@ async function app () {
             name: 'action',
             message: 'Select a choice',
             choices: [
+                'Add Department to Employee',
+                'Add Role to Employee',
+                'Add Employee',
+                'Remove Employee',
+
+                'View Employees',
+                'View Employee by Department',
+                'View Employee by Manager',
+                'View Employee by Role',
+
+                'View Departments',
+                'View Roles',
+                'Add Department',
+                'Remove Department',
+                'Add Roll',
+                'Remove Role',
+                
+                'Update Employee Manager',
+                'Update Employee Department',
+                'Update Employee Role',
+
+
+                
 
             ]
-
         }
-
-
-    ])
+    ]);
 }
+
+init();
